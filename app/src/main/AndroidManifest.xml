@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />    
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.INTERNET" />    
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>    
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <application
+        android:name=".activities.shared.CareBridge"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CareBridge"
+        tools:targetApi="31">
+        <service android:name=".services.location.LocationService"
+            android:foregroundServiceType="location"/>
+        <receiver
+            android:name=".receivers.BootCompletedReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.falldetection.FallDetectionService"
+            android:enabled="true"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            />
+
+        <activity
+            android:name=".activities.seniorcitizen.SeniorItemsListActivity"
+            android:exported="true">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+        </activity>
+            <activity
+            android:name=".activities.seniorcitizen.NewReminder"
+            android:exported="false" />
+        <activity
+            android:name=".activities.seniorcitizen.UserReminder"
+            android:exported="false" />
+        <activity
+            android:name=".activities.seniorcitizen.StoreHealthRecordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.shared.RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.shared.LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver android:name=".utils.ReminderReceiver"/>
+        <service
+                android:name=".utils.NotificationService"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".activities.volunteer.ClientConfirmation"
+            android:exported="false" />
+        <activity
+            android:name=".activities.shared.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.shared.ProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.familyandfriends.ExistingSeniorCitizenView"
+            android:exported="true" />
+        <activity
+            android:name=".activities.familyandfriends.FamilyFriendsView"
+            android:exported="true" />
+        <activity
+            android:name=".activities.volunteer.VolunteerProfileActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.volunteer.VolunteerEditProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activities.volunteer.VolunteerSlotAvailabilityActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activities.seniorcitizen.SeniorBookVolunteerActivity"
+            android:exported="true" />
+
+
+    </application>
+
+
+</manifest>

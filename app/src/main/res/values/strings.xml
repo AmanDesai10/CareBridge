@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">CareBridge</string>
+    <string name="pause">Pause</string>
+    <string name="resume">Resume</string>
+    <string name="navigation_drawer_close">Close</string>
+    <string name="navigation_drawer_open">Open</string>
+</resources>

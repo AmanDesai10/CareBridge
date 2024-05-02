@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CareBridge" parent="Theme.Material3.DayNight">
+        <!-- Add colors here for setting it as the theme color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme.CareBridge" parent="Base.Theme.CareBridge" />
+</resources>

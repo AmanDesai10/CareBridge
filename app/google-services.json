@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880627858186",
+    "project_id": "carebridge-7c38a",
+    "storage_bucket": "carebridge-7c38a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880627858186:android:42c8825d5125b1d38898f3",
+        "android_client_info": {
+          "package_name": "com.example.carebridge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": <CURRENT_KEY>"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/currentBookings"
+            android:title="Current Bookings" />
+        <item
+            android:id="@+id/slotAvailability"
+            android:title="Slot Availability" />
+        <item
+            android:id="@+id/editProfile"
+            android:title="Edit Profile" />
+        <item
+            android:id="@+id/volunteerProfile"
+            android:title="Profile" />
+        <item
+            android:id="@+id/logout"
+            android:title="Logout" />
+    </group>
+
+</menu>

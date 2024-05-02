@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/storeHealthRecordDrawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.seniorcitizen.StoreHealthRecordActivity"
+    >
+
+<LinearLayout
+    android:id="@+id/storeHealthRecord"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.seniorcitizen.StoreHealthRecordActivity"
+    >
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Health Records"
+        android:textSize="24sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="8dp"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/pdfHealthRecordRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="530dp"
+        android:layout_below="@id/titleTextView"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:padding="8dp" />
+
+    <Button
+        android:id="@+id/pickPdfHealthRecordButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload Record"
+        tools:layout_editor_absoluteX="165dp"
+        tools:layout_editor_absoluteY="321dp"
+        android:layout_gravity="center"
+        />
+</LinearLayout>
+
+<com.google.android.material.navigation.NavigationView
+    android:id="@+id/nav_senior"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="start"
+    android:fitsSystemWindows="true"
+    app:menu="@menu/navigation_menu_seniorcitizen"
+    />
+</androidx.drawerlayout.widget.DrawerLayout>
